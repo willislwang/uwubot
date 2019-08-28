@@ -1,11 +1,12 @@
 import discord
 from uwulater import uwulate
 
-TOKEN = 'NjE2MDQwOTcxODYzNDU3ODEz.XWXJ6w.BprUgtO_EL_K0oR2sDYcHD9JtHE'  #REPLACE WITH OWN TOKEN
+#REPLACE WITH OWN TOKEN
+TOKEN = 'NjE2MDQwOTcxODYzNDU3ODEz.XWYi8Q.n5Tie3TlLMtmdWcMjb5wXV6XEKM'
 
 client = discord.Client()
 
-prev_msg = ''
+prev_msg = {}
 
 @client.event
 async def on_message(message):
@@ -13,10 +14,13 @@ async def on_message(message):
     if message.author == client.user:
         return
     elif message.content.startswith('!uwu'):
-        await message.channel.send(uwulate(prev_msg))
+        if hash(message.guild) not in prev_msg:
+            await message.channel.send('nyothing to uwufy uwu')
+        else:
+            uwu_message = uwulate(prev_msg[hash(message.guild)])
+            await message.channel.send(uwu_message)
     else:
-        prev_msg = message.content
-        print('recorded ' + prev_msg)
+        prev_msg[hash(message.guild)] = message.content
 
 
 @client.event
