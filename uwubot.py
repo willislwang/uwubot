@@ -1,7 +1,7 @@
 import discord
 from uwulater import uwulate
 
-TOKEN = 'NjE2MDQwOTcxODYzNDU3ODEz.XWXJ6w.BprUgtO_EL_K0oR2sDYcHD9JtHE'  
+TOKEN = 'NjE2MDQwOTcxODYzNDU3ODEz.XWXJ6w.BprUgtO_EL_K0oR2sDYcHD9JtHE'  #REPLACE WITH OWN TOKEN
 
 client = discord.Client()
 
