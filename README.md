@@ -1,4 +1,4 @@
-# Uwu Bot
+# uwU Bot
 
 Uwu bot is a fun discord bot with the intent of making cute comments and spreading culture. The bot translates any previous comment into uwu language. 
 
