@@ -2,7 +2,7 @@ import discord
 from uwulater import uwulate
 
 #REPLACE WITH OWN TOKEN
-TOKEN = 'NjE2MDQwOTcxODYzNDU3ODEz.XXVk7A.38ytlfbZ7byZE1hG7pasfWflMVY'
+TOKEN = 'NjE2MDQwOTcxODYzNDU3ODEz.XXVw2g.pTW2WyVF3f53SkVHEh5M5N_89MU'
 
 client = discord.Client()
 
@@ -34,7 +34,7 @@ async def on_message(message):
     elif hash(message.guild) in is_uwu and is_uwu[hash(message.guild)]:
         #await message.edit(content = uwulate(message.content))
         await message.delete()
-        await message.channel.send(message.author.name + ':\n```' + uwulate(message.content) + '```')
+        await message.channel.send(message.author.name + ':\n> ' + uwulate(message.content))
     #Uwufy previous message
     elif message.content.startswith('!uwu'):
         if hash(message.guild) not in prev_msg:
