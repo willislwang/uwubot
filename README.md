@@ -19,12 +19,20 @@ python3 uwubot.py
 
 ## Commands
 Use 
+
 ```!help```
+
 to list all commands.
+
 Uwufy pwevious messages with
+
 ```!uwu```
+
 Uwufy aww messages with
+
 ```!uwufy```
+
 and tuwn off with
+
 ```!nouwu```
 
